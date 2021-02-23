@@ -6,7 +6,6 @@
 }
 
 body {
-    background-image: url("images/bg.png");
     background-repeat: repeat;
     background-size: cover;
     font-family: 'IBM Plex Sans', sans-serif;
