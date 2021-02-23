@@ -1,0 +1,11 @@
+
+<html lang="en">
+    <h1>This is the news letter</h1>
+
+<form method="POST">
+    {% csrf_token %} {{ newsform.as_p}}
+
+    <input type="submit" class='btn btn-primary' value="Subscribe">
+</form>
+
+

@@ -1,0 +1,58 @@
+/* ------------------------Product------------------------ */
+
+.left-product {
+    margin-top: 90px;
+}
+
+.text-product {
+    transform: translateY(60px);
+}
+
+.text-product h1 {
+    color: #072E79;
+    font-weight: 600;
+    font-size: 3.7rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.text-product h4 {
+    color: #646566;
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+.containerproduct {
+    width: 100%;
+    transform: translateY(80px);
+}
+
+.containerproductvisual {
+    width: 100%;
+    transform: translateY(20px);
+}
+
+#overview {
+    margin-bottom: 200px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#preprocessing {
+    margin-bottom: 200px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#processing {
+    margin-bottom: 150px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#datavalidation {
+    margin-bottom: 250px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#datavisualization {
+    margin-bottom: 250px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'landing_page/css/landingpage.css' %}">
+    <link rel="stylesheet" href="{% static 'landing_page/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'landing_page/css/simple-sidebar.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <!-- Custom styles for this template -->
+
+    <title>Eddies - Dashboard</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'landing_page/images/eddieslogo.png' %}">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body style="background-color: rgb(243, 239, 239)">
+
+
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <a href="{% url 'home' %}"><img src="{% static 'landing_page/images/eddieslogo.jpg' %}" alt="crash" style="width:180px; height:100% ;"></a>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="{% url 'dashboard:overview' %}" class="list-group-item list-group-item-action">Overview</a>
+                <a href="{% url 'dashboard:preprocessing' %}" class="list-group-item list-group-item-action">Preprocessing</a>
+                <a href="{% url 'dashboard:processing' %}" class="list-group-item list-group-item-action">Processing</a>
+                <a href="{% url 'dashboard:visualization' %}" class="list-group-item list-group-item-action">Data Visualization</a>
+                <a href="{% url 'dashboard:validation' %}" class="list-group-item list-group-item-action">Data Validation</a>
+            </div>
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg border-bottom">
+                <button id="menu-toggle"><i class="fas fa-angle-double-left fa-lg"></i></button>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    {% if user.is_authenticated %}
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'accounts:personal' request.user.id %}" style="color:blue; font-weight: bold;">{{user.username}}</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Settings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item drop" href="{% url 'accounts:change-password' request.user.id %}">Change Password</a>
+                                <a class="dropdown-item drop" href="{% url 'accounts:edit-account' request.user.id %}">Edit Accounts</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:privacy-policy'  %}">Privacy Policy</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:terms-of-service'  %}">Terms of Service</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                {% include 'dashboard/messages.html' %} {% block content %} {% endblock %}
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="{% static 'landing_page/js/jquery.min.js' %}"></script>
+    <script src="{% static 'landing_page/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        $(document).on('click', 'a', function() {
+            $(this).addClass('list-group-item').siblings.removeClass('list-group-item')
+        });
+
+        setTimeout(function() {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 4000);
+    </script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% extends 'dashboard/baseproduct.html' %} {% load static %} {% block content %} {% load static %}{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Success - Eddies</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'landing_page/images/eddieslogo.png' %}">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body style="background: #efeff0;">
+    <section id="float-form">
+        <div class="container">
+            <div class="box-float">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-password-change" data-aos="zoom-in" data-aos-duration="1000">
+                            <h1 style="text-align: center;">Coming Soon.</h1>
+                            <br>
+                            <br>
+                            <img width="600" height="300" src="{% static 'landing_page/images/passwordchange.svg' %}">
+                            <h4>Back to <a href="{% url 'dashboard:dashboard' %}">Home</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,200 @@
+{% extends 'base.html' %} {% load static %}{% load bootstrap5 %} {% block content %}
+<!--- Killer Headline -->
+
+<div class="loader_bg">
+    <div class="loader"></div>
+</div>
+
+<section id="killerheadbanner">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="killer-text" data-aos="fade-in" data-aos-duration="1000">
+
+                <h1>Powering your ocean data</h1>
+                <br>
+                <h4>Transform your research and work through collaboration <br> and advanced data analytics in the cloud.</h4>
+                <br>
+                <br>
+
+                <a href="#">
+                    <button id="demobutton">Demo</button>
+                </a>
+                <a href="{% url 'dashboard:dashboard' %}">
+                    <button id="startbutton">Start now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="killer-image" data-aos="zoom-in" data-aos-duration="1000">
+                <img width="700" height="400" src="{% static 'landing_page/images/killerhead.svg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--- title -->
+<section id="firsttitle" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="textarea1">
+                    <img width="600" height="400" src="{% static 'landing_page/images/fast.svg' %}" alt="picture crash">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1>
+                    Accelerate your ocean research with Eddies.
+                </h1>
+                <br>
+                <h4>
+                    Data processing and visualization are the essential parts of ocean research, but these parts is being hindered by time-consuming process of difficult and complex coding. Eddies is a web-based ocean data analytics platform that will help you from preparing
+                    to visualizing your data.
+                </h4>
+            </div>
+</section>
+
+<!--- Feature 1 -->
+<section id="f1">
+    <div class="container" data-aos="fade-left" data-aos-duration="1000">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="textarea1">
+                    <h1>Focus on your analysis, not on the code.
+                    </h1>
+                    <br>
+                    <p></p>
+                    <h4>Technical tasks like coding can be complicated and time-consuming for your research. Eddies can help you to solve such problems by providing an easy-to-use data analytics tool. Processing data and visualization can be done in minutes.
+                        So, you can focus on your analysis.
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="vid1" data-aos="fade-left">
+                    <video width="100%" autoplay muted loop>
+                        <source src="{% static 'landing_page/videos/streamlit.mp4' %}" type="video/ogg">
+                    </video>
+                </div>
+            </div>
+</section>
+
+
+
+<!--- Feature 2 -->
+<section id="f2">
+    <div class="container" data-aos="fade-right" data-aos-duration="1000">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="vid2">
+                    <video width="100%" autoplay muted loop>
+                        <source src="{% static 'landing_page/videos/graphic.mp4' %}" type="video/ogg">
+                    </video>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="textarea2">
+                    <h1>All-in-one cloud solution.
+                    </h1>
+                    <br>
+                    <h4>Dealing with multiple software might slow down your work. We provide cloud-based data analytic tools that enable you to work in one integrated platform.
+                    </h4>
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--- About Big Data / Ocean Data Processing  -->
+<section id="aboutdata">
+    <div class="container">
+        <h1 class="title text-center">What exactly we need ?</h1>
+        <div class="row upperrow" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-md-4 testimonials">
+                <p>Memory is often the main problem in big data processing. It takes a large enough memory to be able to perform data processing properly. It would be very good if we don't need to think about the memory capacity of the devices we have.</p>
+                <i class="fas fa-user-cog"></i>
+                <h7><strong>Professionals - Tech. Support Engineer</strong></h7>
+            </div>
+            <div class="col-md-4 testimonials">
+                <p>The display form of the results of data processing is a very important factor for data analysis, so that the purposes and objectives of data processing can be easily understood by cross-sectors or companies.</p>
+                <br>
+                <i class="fas fa-user-cog"></i>
+                <h7 style="text-align: right"><strong>Professionals - Metocean Data Analyst</strong></h7>
+            </div>
+            <div class="col-md-4 testimonials">
+                <p>
+                    Data identification and processing cannot be separated from the many parameters in the sea itself. The variation and level of difficulty in data processing is often one of the obstacles in the processing stage. Can we get the data results without encountering
+                    this problem?</p>
+                <i class="fas fa-user-graduate fa-sm"></i>
+                <h7><strong>Academics - Researcher</strong></h7>
+            </div>
+
+        </div>
+        <div class="row bottomrow" data-aos="fade-up" data-aos-duration="1000">
+            <div class="col-md-4 testimonials">
+                <p>It is burdensome when processing large (four-dimensional) oceanographic data. The PC must be qualified to perform statistical calculations. and it's hard to do visualization because the interpretation of the data does not match
+                </p>
+                <br>
+                <br>
+                <i class="fas fa-user-graduate fa-sm"></i>
+                <h7><strong>Academics - Lecturer</strong></h7>
+            </div>
+            <div class="col-md-4 testimonials">
+                <p>There is a lot of blank data. Interpolation is not always effective and risky. If the time series is long enough, there must be script adjustments from time to time when processing the data.</p>
+                <br>
+                <br>
+                <br>
+                <i class="fas fa-user-cog"></i>
+                <h7><strong>Professionals - Oceanographer</strong></h7>
+            </div>
+            <div class="col-md-4 testimonials">
+                <p>Hard for me to just tidy up the data and get rid of unused data. So far, I do it manually because the data format from some processing platform to Excel output is different. I have difficulty in visualization, so I need to read the manual
+                    guide. the hardest thing is when the process of running data is very long and the results are disappointing.
+                </p>
+                <i class="fas fa-user-graduate fa-sm"></i>
+                <h7><strong>Academics - Undergraduate Program</strong></h7>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--- Feature 3 -->
+<section id="f3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="textarea3">
+                    <h1>Understand your data faster.</h1>
+                    <br>
+                    <img width="600" height="500" src="{% static 'landing_page/images/understanddata.svg' %}" alt="picture crash">
+                    <a href="{% url 'landing_page:product' %}"><button type="button" id="learnbutton">Learn More</button> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section id="newsletter">
+    <div class="container">
+        <div class="newsletter" data-aos="fade-up" data-aos-duration="1000">
+            <h1 style="font-size:2.5rem;">Request for <span style="color:#4460EF">Early Adopters</span></h1>
+            <h4 style="font-weight: 200;">Get opportunity to try our Eddies early stage product for <strong>free</strong>.</h4>
+            <br><br> {% include 'dashboard/messages.html' %}
+            <form method="POST">
+                {% csrf_token %} {% bootstrap_form newsform %}
+                <br>
+                <input type="submit" class='btn btn-success w-100' value="Request">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}

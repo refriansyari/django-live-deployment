@@ -1,0 +1,19 @@
+{% extends 'dashboard/baseproduct.html' %} {% load static %} {% block content %}
+
+<div class="container" data-aos="fade-in" data-aos-duration="1000">
+    <h1 style="text-align:center">Congratulations, <span style="color:blue;">{{user.username}}</span>.</h1>
+    <hr>
+    <h4 style="text-align:center">One more step to get your visual-interactive data.</h4>
+    <center>
+        <a href="{% url 'accounts:personal' request.user.id %}" class="btn btn-dark" style="margin-left:20px; margin-top:20px;">My Profile</a>
+
+    </center>
+    <div class="dashboard-home">
+        <img width="790" height="420" src="{% static 'landing_page/images/one_step.svg' %}">
+    </div>
+
+</div>
+
+
+
+{% endblock %}
