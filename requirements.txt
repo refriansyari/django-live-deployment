@@ -50,3 +50,4 @@ whitenoise==5.2.0
 wincertstore==0.2
 wrapt==1.11.2
 xarray==0.16.2
+dj-database-url==0.5.0
