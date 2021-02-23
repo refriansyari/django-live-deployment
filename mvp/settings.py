@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'dashboard',
     'crispy_forms',
     'landing_page',
+    'storages',
     'bootstrap5',
     'widget_tweaks',
     'django_countries',
