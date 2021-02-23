@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = BASE_DIR / 'templates'
-STATIC_DIR = BASE_DIR / 'static'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -27,7 +26,7 @@ SECRET_KEY = 'mjq)%57%r9t8yj6sq5p5@wtdlat)ii^ljk_#x(_ilbbn+*&=6b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['eddies-mvp.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0','eddies-mvp.herokuapp.com','127.0.0.1','localhost']
 # 
 
 
@@ -48,6 +47,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'widget_tweaks',
     'django_countries',
+    'whitenoise.runserver_nostatic',
     
 ]
 
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'mvp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -95,7 +95,10 @@ DATABASES = {
         'HOST': '127.0.0.1', 
         'PORT': '5432',
     }
-}
+} 
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -150,7 +153,8 @@ LOGGING = {
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [STATIC_DIR,]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')
+STATICFILES_STORAGE = ['whitenoise.storage.CompressedManifestStaticFilesStorage']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
