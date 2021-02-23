@@ -25,10 +25,10 @@ STATIC_DIR = BASE_DIR / 'static'
 SECRET_KEY = 'mjq)%57%r9t8yj6sq5p5@wtdlat)ii^ljk_#x(_ilbbn+*&=6b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-# 'eddies-mvp.herokuapp.com/','127.0.0.1'
+ALLOWED_HOSTS = ['eddies-mvp.herokuapp.com','127.0.0.1']
+# 
 
 
 # Application definition
