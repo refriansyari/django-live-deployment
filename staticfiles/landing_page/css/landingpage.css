@@ -6,7 +6,6 @@
 }
 
 body {
-    background-image: url("images/bg.png");
     background-repeat: repeat;
     background-size: cover;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -137,21 +136,24 @@ body {
 .killer-text {
     text-align: left;
     padding-top: 50px;
-    margin-left: 140px;
+    padding-left: 15%;
 }
 
 .killer-text h1 {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 500;
 }
 
 .killer-text h4 {
     color: #494848;
     font-weight: 400;
+    font-size: 1.4rem;
 }
 
 .killer-image {
     margin-top: 60px;
+    justify-content: center;
+    padding-left: 15%;
 }
 
 .wavy img {
@@ -191,23 +193,7 @@ a #startbutton {
     border-radius: 10px;
     border: none;
     font-size: 1.2rem;
-    width: 140px;
-    height: 60px;
-    margin: 10px;
-    box-shadow: 8px 8px 8px -6px rgba(0, 0, 0, .5);
-    transition: 0.5s;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a #startbutton {
-    background-color: #4460EF;
-    /* background-color: #072E79; */
-    color: #ffffff;
-    border-radius: 10px;
-    border: none;
-    font-size: 1.2rem;
-    width: 140px;
+    width: 200px;
     height: 60px;
     margin: 10px;
     box-shadow: 8px 8px 8px -6px rgba(0, 0, 0, .5);
@@ -251,7 +237,6 @@ a #demobutton {
     transition: 0.5s;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 70px;
 }
 
 a:hover #demobutton {
@@ -285,9 +270,9 @@ div a {
 }
 
 #firsttitle h4 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.8rem;
-    color: #000000;
+    color: #6C6B6B;
 }
 
 
@@ -301,6 +286,12 @@ div a {
 
 .textarea1 {
     margin-top: 20px;
+    margin-left: 50px;
+}
+
+.textareaimage1 {
+    margin-top: 20px;
+    transform: translateX(40px);
 }
 
 .textarea1 h1 {
@@ -335,6 +326,7 @@ div #vid1 {
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .3);
     border-radius: 10px;
     overflow: hidden;
+    margin-left: 20px;
 }
 
 
@@ -639,7 +631,9 @@ a:hover .btn-footer {
 /* ---------------------------------Dashboard Home------------------------------ */
 
 .dashboard-home {
-    margin: 20px 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 
@@ -733,6 +727,11 @@ th {
     border-radius: 20px;
 }
 
+.text-float {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .box-float-password {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -762,7 +761,9 @@ th {
     padding: 40px;
 }
 
-.box-password-change {}
+.box-password-change {
+    padding: 0 70px;
+}
 
 .box-image {
     padding: 0px;
@@ -786,6 +787,76 @@ th {
 
 .login-icon {
     text-align: center;
+    margin-bottom: 10px;
+}
+
+#id_username {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_password {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_password1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_password2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_first_name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_last_name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_email {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_company_name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_company_url {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_affiliation {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_country {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_new_password1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_new_password2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_old_password {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -878,9 +949,19 @@ th {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.accordion-button:not(.collapsed) {
-    color: white;
-    background-color: #4460EF;
+.personal-info p {
+    margin-top: 35px;
+    font-size: 1.2rem;
+}
+
+.personal-information {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-redirect {
+    text-align: center;
+    padding: 40px;
 }
 
 
