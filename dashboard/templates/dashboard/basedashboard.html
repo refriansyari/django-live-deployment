@@ -25,7 +25,7 @@
     <section id="Navbar">
         <nav class="navbar navbar-expand-lg bgcolor navbar-custom">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="{% static 'landing_page/images/eddieslogo.jpg' %}" alt="logo picture" width="180px" height="auto"></a>
+                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'landing_page/images/eddieslogo.jpg' %}" alt="logo picture" width="180px" height="auto"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -39,10 +39,10 @@
                             Settings
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#overview">Account Settings</a>
-                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#preprocessing">Change Password</a>
-                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#processing">Privacy Policy</a>
-                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#datavisualization">Terms of Service</a>
+                                <a class="dropdown-item drop" href="{% url 'accounts:edit-account' request.user.id %}">Account Settings</a>
+                                <a class="dropdown-item drop" href="{% url 'accounts:change-password' request.user.id %}">Change Password</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:privacy-policy'  %}">Privacy Policy</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:terms-of-service'  %}">Terms of Service</a>
                             </div>
                         </li>
                     </ul>
@@ -72,7 +72,7 @@
     </section>
 
 
-    {% block content %} {% endblock %}
+    {% block content %}{% endblock %}
 
 
 

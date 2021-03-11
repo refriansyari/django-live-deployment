@@ -1,42 +1,30 @@
-{% extends 'dashboard/baseproduct.html' %}{% load bootstrap5 %} {% load static %} {% block content %}
-{% if user.is_authenticated %}
-    {% if request.user.id == request.user.userprofile.id %}
-        <section class="personal-information">
-            <div class="container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="box-profile1" data-aos="fade-right" data-aos-duration="1000">
-                                <div class="picture-frame">
-                                    <p><img id="profpic" src="{{ request.user.userprofile.profile_picture.url }}"></p>
-                                </div>
-                                <h3 style="text-align: center;"><strong>{{ user.first_name }} {{ user.last_name }}</strong></h3>
-                                <hr>
-                                <div class="personal-info">
-                                    <p><i class="fas fa-at fa-lg"></i> {{ user.username }}</p>
-                                    <p><i class="far fa-envelope fa-lg"></i> {{ user.email }}</p>
-                                    <p><i class="fas fa-university fa-lg"></i> {{ user.userprofile.company_name }}</p>
-                                    <p><i class="fas fa-link fa-lg"></i> <a href="{{request.user.userprofile.company_url.url}}" target="_blank">   {{ user.userprofile.company_url }}</a> </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="box-profile-edit" data-aos="fade-left" data-aos-duration="1000">
-                                <form method="POST" enctype="multipart/form-data">
-                                    {% csrf_token %} {% bootstrap_form editform %}
-                                    <input class="btn btn-primary btn-block" type="submit" value="Update" name="Update" style="margin-top: 10px;">
-                                </form>
-                            </div>
+{% extends 'dashboard/basedashboard.html' %}{% load bootstrap5 %} {% load static %} {% block content %} {% if user.is_authenticated %} {% if request.user.id == request.user.userprofile.id %}
+<section class="personal-information">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box-profile1" data-aos="fade-right" data-aos-duration="1000">
+                        <h3 style="text-align: center;"><strong>{{ user.first_name }} {{ user.last_name }}</strong></h3>
+                        <hr>
+                        <div class="personal-info">
+                            <p><i class="fas fa-at fa-lg"></i> {{ user.username }}</p>
+                            <p><i class="far fa-envelope fa-lg"></i> {{ user.email }}</p>
+                            <p><i class="fas fa-university fa-lg"></i> {{ user.userprofile.company_name }}</p>
+                            <p><i class="fas fa-link fa-lg"></i> <a href="{{request.user.userprofile.company_url.url}}" target="_blank">   {{ user.userprofile.company_url }}</a> </p>
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-8">
+                    <div class="box-profile-edit" data-aos="fade-left" data-aos-duration="1000">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %} {% bootstrap_form editform %}
+                            <input class="btn btn-primary btn-block" type="submit" value="Update" name="Update" style="margin-top: 10px;">
+                        </form>
+                    </div>
+                </div>
             </div>
-        </section>
-    {% else %}
-    You cannot edit this session.
-    {% endif %}
-{% else %}
-Your session has ended
-{% endif %}
-
-{% endblock %}
+        </div>
+    </div>
+</section>
+{% else %} You cannot edit this session. {% endif %} {% else %} Your session has ended {% endif %} {% endblock %}

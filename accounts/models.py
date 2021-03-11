@@ -23,7 +23,6 @@ class UserProfile(models.Model):
                     ('Industry/Government','Industry/Government'))
 
     affiliation = models.CharField(max_length=50, choices=AFF_CHOICES, null=True, blank=True)
-    profile_picture = models.ImageField(upload_to='staticfiles', null=True, default='staticfiles/landing_page/images/defaultphoto.png')
 
     def __str__(self):
         return str(self.user)

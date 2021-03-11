@@ -63,7 +63,7 @@ class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('company_name', 'company_url','affiliation','country','profile_picture')
+        fields = ('company_name', 'company_url','affiliation','country',)
         exclude =('user',)
     
         widgets = {
@@ -77,7 +77,6 @@ class UserProfileForm(forms.ModelForm):
         self.fields['company_url'].label = "Company or institution URL (ex: https://www.example.com)"
         self.fields['affiliation'].label = "Affiliation"
         self.fields['country'].label = "Country"
-        self.fields['profile_picture'].label = "Add profile picture"
 
 class UserAccountForm(forms.ModelForm):
 

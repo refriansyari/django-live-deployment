@@ -140,7 +140,7 @@ body {
 }
 
 .killer-text h1 {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 500;
 }
 
@@ -761,7 +761,9 @@ th {
     padding: 40px;
 }
 
-.box-password-change {}
+.box-password-change {
+    padding: 0 70px;
+}
 
 .box-image {
     padding: 0px;
@@ -819,6 +821,36 @@ th {
 }
 
 #id_email {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_company_name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_company_url {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_affiliation {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_country {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_new_password1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#id_new_password2 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -910,6 +942,11 @@ th {
     padding-top: 20px;
     font-weight: 300;
     font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.personal-info p {
+    margin-top: 35px;
+    font-size: 1.2rem;
 }
 
 .personal-information {
