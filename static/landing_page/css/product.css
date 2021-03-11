@@ -6,12 +6,13 @@
 
 .text-product {
     transform: translateY(60px);
+    margin-left: 30px;
 }
 
 .text-product h1 {
     color: #072E79;
     font-weight: 600;
-    font-size: 3.7rem;
+    font-size: 3.3rem;
     margin-top: 30px;
     margin-bottom: 30px;
 }

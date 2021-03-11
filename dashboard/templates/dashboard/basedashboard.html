@@ -1,0 +1,113 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eddies</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'landing_page/images/eddieslogo.png' %}">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'landing_page/css/landingpage.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Slider -->
+</head>
+
+<body style="background-color: rgb(243, 239, 239)">
+    <!--- Navigation Bar -->
+    <section id="Navbar">
+        <nav class="navbar navbar-expand-lg bgcolor navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="{% static 'landing_page/images/eddieslogo.jpg' %}" alt="logo picture" width="180px" height="auto"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav testi">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'home' %}#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true">
+                            Settings
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#overview">Account Settings</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#preprocessing">Change Password</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#processing">Privacy Policy</a>
+                                <a class="dropdown-item drop" href="{% url 'landing_page:product' %}#datavisualization">Terms of Service</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    {% if user.is_authenticated %}
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mynavbar">
+                            <a class="nav-link" href="{% url  'dashboard:dashboard'%}">Hello <span style="color:#4460EF;">{{ user.username }} </span>!</a>
+                        </li>
+                        <li class="nav-item mynavbar">
+                            <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+                        </li>
+                    </ul>
+                    {% else %}
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mynavbar">
+                            <a class="nav-link" href="{% url 'accounts:login' %}">Log in</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="btnnav" href="{% url 'accounts:signup' %}"><button type="button">Sign Up</button></a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </section>
+
+
+    {% block content %} {% endblock %}
+
+
+
+    <!--- Bottom headline  -->
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="{% static 'landing_page/js/jquery.min.js' %}"></script>
+    <script src="{% static 'landing_page/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+        $(window).scroll(function() {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+        });
+        setTimeout(function() {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
+            }
+        }, 4000);
+        setTimeout(function() {
+            $('.loader_bg').fadeToggle();
+        }, 500);
+        $(document).ready(function() {
+            $('ul.navbar-nav > li')
+                .click(function(e) {
+                    $('ul.navbar-nav > li')
+                        .removeClass('active');
+                    $(this).addClass('active');
+                });
+        });
+    </script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

@@ -39,8 +39,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="box-image-signup">
-                            <img src="{% static 'landing_page/images/eddieslogo.jpg' %}" alt="crash" style="width: 100%; height:100%">
+                            <a href="{% url 'home' %}"><img src="{% static 'landing_page/images/eddieslogo.jpg' %}" alt="crash" style="width: 100%; height:100%"></a>
                             <h3 style="text-align: center;">Already Sign up? <a href=" {% url 'accounts:login' %} ">Sign in</a>.</h3>
+                            <h3 style="text-align: center;">or</h3>
+                            <h3 style="text-align: center;">Back to <a href="{% url 'home' %}">Home</a>.</h3>
 
                         </div>
                     </div>

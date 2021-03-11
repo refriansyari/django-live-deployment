@@ -4,7 +4,7 @@
 <div class="loader_bg">
     <div class="loader"></div>
 </div>
-
+{% include 'dashboard/messages.html' %}
 <section id="killerheadbanner">
     <div class="row">
         <div class="col-md-6">
@@ -12,13 +12,12 @@
 
                 <h1>Powering your ocean data</h1>
                 <br>
-                <h4>Transform your research and work through collaboration <br> and advanced data analytics in the cloud.</h4>
-                <br>
+                <h4>Transform your work and research through collaboration <br> and advanced data analytics in the cloud.</h4>
                 <br>
 
-                <a href="#">
+                <!-- <a href="#">
                     <button id="demobutton">Demo</button>
-                </a>
+                </a> -->
                 <a href="{% url 'dashboard:dashboard' %}">
                     <button id="startbutton">Start now</button>
                 </a>
@@ -27,7 +26,7 @@
 
         <div class="col-md-6">
             <div class="killer-image" data-aos="zoom-in" data-aos-duration="1000">
-                <img width="700" height="400" src="{% static 'landing_page/images/killerhead.svg' %}">
+                <img width="90%" height="auto" src="{% static 'landing_page/images/killerhead.svg' %}">
             </div>
         </div>
     </div>
@@ -38,25 +37,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="textarea1">
-                    <img width="600" height="400" src="{% static 'landing_page/images/fast.svg' %}" alt="picture crash">
+                <div class="textareaimage1">
+                    <img width="70%" height="auto" src="{% static 'landing_page/images/fast.svg' %}" alt="picture crash">
                 </div>
             </div>
             <div class="col-md-6">
                 <h1>
                     Accelerate your ocean research with Eddies.
                 </h1>
-                <br>
-                <h4>
-                    Data processing and visualization are the essential parts of ocean research, but these parts is being hindered by time-consuming process of difficult and complex coding. Eddies is a web-based ocean data analytics platform that will help you from preparing
-                    to visualizing your data.
-                </h4>
+                <h4>Data processing and visualization are the essential parts of ocean research, but these parts is being hindered by time-consuming process of difficult and complex coding.</h4>
+                <h4>Eddies is a web-based ocean data analytics platform that will help you preparing to visualizing your data.</h4>
             </div>
+        </div>
+    </div>
 </section>
 
 <!--- Feature 1 -->
 <section id="f1">
-    <div class="container" data-aos="fade-left" data-aos-duration="1000">
+    <div class="container" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
             <div class="col-md-6">
                 <div class="textarea1">
@@ -70,23 +68,25 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div id="vid1" data-aos="fade-left">
+                <div id="vid1" data-aos="zoom-in">
                     <video width="100%" autoplay muted loop>
                         <source src="{% static 'landing_page/videos/streamlit.mp4' %}" type="video/ogg">
                     </video>
                 </div>
             </div>
+        </div>
+    </div>
 </section>
 
 
 
 <!--- Feature 2 -->
 <section id="f2">
-    <div class="container" data-aos="fade-right" data-aos-duration="1000">
+    <div class="container" data-aos="zoom-in" data-aos-duration="1000">
         <div class="row">
             <div class="col-md-8">
                 <div id="vid2">
-                    <video width="100%" autoplay muted loop>
+                    <video width="80%" autoplay muted loop>
                         <source src="{% static 'landing_page/videos/graphic.mp4' %}" type="video/ogg">
                     </video>
                 </div>
@@ -136,27 +136,28 @@
         </div>
         <div class="row bottomrow" data-aos="fade-up" data-aos-duration="1000">
             <div class="col-md-4 testimonials">
-                <p>It is burdensome when processing large (four-dimensional) oceanographic data. The PC must be qualified to perform statistical calculations. and it's hard to do visualization because the interpretation of the data does not match
+                <p>The things that are troublesome when I process oceanographic data are: First, the data is large because the data is four dimensions; second, PCs sometimes have to be able to perform statistical calculations with big data; third, sometimes
+                    you cannot arbitrarily choose a visualization method, because it can cause the results of data interpretation to be inconsistent with the theory.
                 </p>
                 <br>
-                <br>
                 <i class="fas fa-user-graduate fa-sm"></i>
-                <h7><strong>Academics - Lecturer</strong></h7>
+                <h7><strong>Professionals - Oceanographer</strong></h7>
             </div>
             <div class="col-md-4 testimonials">
-                <p>There is a lot of blank data. Interpolation is not always effective and risky. If the time series is long enough, there must be script adjustments from time to time when processing the data.</p>
+                <p>There is a lot of blank data. So, we have to use interpolation method, but it is not always effective and risky to fill the blank data. For time series data, if the data is too long, there must be a script adjustment for processing the
+                    data.
+                </p>
                 <br>
                 <br>
                 <br>
                 <i class="fas fa-user-cog"></i>
-                <h7><strong>Professionals - Oceanographer</strong></h7>
+                <h7><strong>Academics - Oceanography Lecturer</strong></h7>
             </div>
             <div class="col-md-4 testimonials">
-                <p>Hard for me to just tidy up the data and get rid of unused data. So far, I do it manually because the data format from some processing platform to Excel output is different. I have difficulty in visualization, so I need to read the manual
-                    guide. the hardest thing is when the process of running data is very long and the results are disappointing.
-                </p>
+                <p>I have difficulty tidying up data and extracting lots of raw data. For example, when processing data, the data that appears in one hour can be up to five data. In fact, the data required is only one data per hour. In addition, data reorganization
+                    is required due to the different file formats. for example, when data is transferred from Matlab output to MS Excel, the data representation is different from the initial data.</p>
                 <i class="fas fa-user-graduate fa-sm"></i>
-                <h7><strong>Academics - Undergraduate Program</strong></h7>
+                <h7><strong>Student - Undergraduate Program</strong></h7>
             </div>
         </div>
     </div>
@@ -171,7 +172,7 @@
                 <div class="textarea3">
                     <h1>Understand your data faster.</h1>
                     <br>
-                    <img width="600" height="500" src="{% static 'landing_page/images/understanddata.svg' %}" alt="picture crash">
+                    <img width="40%" height="auto" src="{% static 'landing_page/images/understanddata.svg' %}" alt="picture crash">
                     <a href="{% url 'landing_page:product' %}"><button type="button" id="learnbutton">Learn More</button> </a>
                 </div>
             </div>
@@ -184,7 +185,7 @@
         <div class="newsletter" data-aos="fade-up" data-aos-duration="1000">
             <h1 style="font-size:2.5rem;">Request for <span style="color:#4460EF">Early Adopters</span></h1>
             <h4 style="font-weight: 200;">Get opportunity to try our Eddies early stage product for <strong>free</strong>.</h4>
-            <br><br> {% include 'dashboard/messages.html' %}
+            <br><br>
             <form method="POST">
                 {% csrf_token %} {% bootstrap_form newsform %}
                 <br>

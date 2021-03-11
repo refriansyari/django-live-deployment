@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: white;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.sidebar ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    position: relative;
+    width: 100%;
+    display: flex;
+    display: block;
+    text-decoration: none;
+    color: rgb(102, 101, 101);
+}
+
+.sidebar ul li .icon {
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+}
+
+.sidebar ul li .icon .fa {
+    font-size: 24px;
+}
+
+.sidebar ul li a .title {
+    position: relative;
+    min-width: 60px;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    whitespace: nowrap;
+    display: block;
+}

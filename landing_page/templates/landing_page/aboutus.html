@@ -28,12 +28,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box-password-change" data-aos="zoom-in" data-aos-duration="1000">
-                            <h1 style="text-align: center;">Coming Soon.</h1>
-                            <h5>Get the latest update and opportunity to try Eddies early stage product <a href="{% url 'home' %}#newsletter">here</a>.</h5>
-                            <br>
-                            <br>
-                            <img width="700" height="300" src="{% static 'landing_page/images/coming.svg' %}">
-                            <h4>Back to <a href="{% url 'home' %}">Home</a></h4>
+                            <div class="text-float">
+                                <h1 style="text-align: center;">Coming Soon.</h1>
+                                <h5>Get the latest update and opportunity to try Eddies early stage product <a href="{% url 'home' %}#newsletter">here</a>.</h5>
+                                <br>
+                                <br>
+                                <img width="50%" height="auto" src="{% static 'landing_page/images/coming.svg' %}">
+                                <h4>Back to <a href="{% url 'home' %}">Home</a></h4>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,10 +46,10 @@
 
     <!-- AOS -->
     <script src="{% static 'landing_page/js/jquery.min.js' %}"></script>
-        <script src="{% static 'landing_page/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'landing_page/js/bootstrap.bundle.min.js' %}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        setTimeout(function(){
+        setTimeout(function() {
             $('.loader_bg').fadeToggle();
         }, 1000);
     </script>
