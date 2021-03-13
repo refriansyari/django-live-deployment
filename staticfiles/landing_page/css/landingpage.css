@@ -129,7 +129,7 @@ body {
 /* -----------------------------Killer Banner------------------------------- */
 
 #killerheadbanner {
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -140,14 +140,14 @@ body {
 }
 
 .killer-text h1 {
-    font-size: 5.5rem;
+    font-size: 10vmin;
     font-weight: 500;
 }
 
 .killer-text h4 {
     color: #494848;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 3vmin;
 }
 
 .killer-image {
@@ -172,7 +172,7 @@ div.col-md-12 {
 
 div.col-md-12 h1 {
     margin-top: 30px;
-    font-size: 4rem;
+    font-size: 9vmin;
     color: #072E79;
     font-weight: 600;
     /* color: white; */
@@ -192,10 +192,9 @@ a #startbutton {
     color: #ffffff;
     border-radius: 10px;
     border: none;
-    font-size: 1.2rem;
-    width: 200px;
-    height: 60px;
-    margin: 10px;
+    font-size: 2.7vmin;
+    width: 16vw;
+    height: 8vmin;
     box-shadow: 8px 8px 8px -6px rgba(0, 0, 0, .5);
     transition: 0.5s;
     text-decoration: none;
@@ -257,21 +256,20 @@ div a {
 /* -----------------------------First Title------------------------------- */
 
 #firsttitle {
-    margin: 100px;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #firsttitle h1 {
     color: #000000;
     font-weight: bold;
-    font-size: 3rem;
-    margin-bottom: 50px;
+    font-size: 3.5vw;
+    margin-bottom: 10px;
 }
 
 #firsttitle h4 {
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 3.5vmin;
     color: #6C6B6B;
 }
 
@@ -280,7 +278,7 @@ div a {
 
 #f1 {
     margin-top: 30px;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -291,18 +289,21 @@ div a {
 
 .textareaimage1 {
     margin-top: 20px;
-    transform: translateX(40px);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .textarea1 h1 {
     color: #072E79;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.2vw;
 }
 
 .textarea1 h4 {
     color: #6C6B6B;
     font-weight: 400;
+    font-size: 3.5vmin;
 }
 
 .textarea1 h6 a {
@@ -322,43 +323,50 @@ div a {
 }
 
 div #vid1 {
-    border: 1px solid #000000;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .3);
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 
 /* -----------------------------Feature 2------------------------------- */
 
 #f2 {
-    margin-top: 100px;
-    margin-bottom: 250px;
+    margin-top: 50px;
+    margin-bottom: 180px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 div #vid2 {
-    border: 1px solid #000000;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .3);
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
+    margin-left: 10%;
+    width: 85%;
+    height: auto;
 }
 
 .textarea2 {
-    margin-top: 10px;
     margin-left: 50px;
+    padding-top: 120px;
 }
 
 .textarea2 h1 {
     color: #072E79;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.3vw;
 }
 
 .textarea2 h4 {
     color: #6C6B6B;
     font-weight: 400;
+    font-size: 3.5vmin;
 }
 
 a #learnbutton {
@@ -472,6 +480,12 @@ a:hover #learnbutton {
     padding-bottom: 40px;
 }
 
+.newsletter1 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 
 /* --------------------------About Ocean Data------------------------------- */
 
@@ -485,7 +499,7 @@ a:hover #learnbutton {
 }
 
 .text-center {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     font-weight: 800;
     padding-bottom: 20px;
 }
@@ -530,16 +544,17 @@ div .col-md-12 .highlights h1 {
 }
 
 a .btn-footer {
-    padding: 15px 30px;
     text-decoration: none;
     background-color: white;
     border-radius: 20px;
     border: none;
     font-weight: 600;
     color: #4460EF;
-    font-size: 1.5rem;
+    font-size: 3vmin;
     box-shadow: 10px 10px 8px -6px rgba(0, 0, 0, .5);
     transition: 0.5s;
+    width: 35vmin;
+    height: 8vh;
 }
 
 a:hover .btn-footer {
