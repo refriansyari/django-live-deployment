@@ -11,13 +11,12 @@
 .text-product h1 {
     color: #072E79;
     font-weight: 600;
-    font-size: 5vmax;
+    font-size: 4.5vmax;
 }
 
 .text-product h4 {
     color: #646566;
     font-weight: 300;
-    color: white;
     font-size: 1.5rem;
 }
 
@@ -35,34 +34,30 @@
     padding-bottom: 50px;
     padding-top: 50px;
     font-family: 'IBM Plex Sans', sans-serif;
-    background-color: grey;
 }
 
 #preprocessing {
     padding-bottom: 150px;
-    padding-top: 60px;
+    padding-top: 90px;
     font-family: 'IBM Plex Sans', sans-serif;
-    background-color: grey;
 }
 
 #processing {
     padding-bottom: 100px;
-    background-color: white;
+    padding-top: 130px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 #datavalidation {
     padding-bottom: 150px;
-    padding-top: 80px;
+    padding-top: 110px;
     font-family: 'IBM Plex Sans', sans-serif;
-    background-color: grey;
 }
 
 #datavisualization {
     padding-bottom: 100px;
-    padding-top: 50px;
+    padding-top: 90px;
     font-family: 'IBM Plex Sans', sans-serif;
-    background: white;
 }
 
 div #vid1product {
@@ -71,7 +66,7 @@ div #vid1product {
     overflow: hidden;
     margin-top: 60px;
     margin-left: 10%;
-    width: 90%;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -83,7 +78,7 @@ div #vid2product {
     overflow: hidden;
     margin-top: 20px;
     margin-left: 10%;
-    width: 90%;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -94,7 +89,7 @@ div #vid3product {
     border-radius: 5px;
     overflow: hidden;
     margin: auto;
-    width: 50%;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -106,7 +101,7 @@ div #vid4product {
     border-radius: 5px;
     overflow: hidden;
     margin: auto;
-    width: 50%;
+    width: 80%;
     height: auto;
     display: flex;
     justify-content: center;
