@@ -4,119 +4,138 @@
 <div class="loader_bg">
     <div class="loader"></div>
 </div>
-<section id="overview">
 
-    <div class="container">
-        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Product</li>
-            </ol>
-        </nav>
-        <div class="row">
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
-                <div class="containerproduct">
-                    <img style="width:60%; box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .2); height:auto; border: 1px solid rgb(197, 195, 195); border-radius:10px; margin-left:20%;transform: translateY(20px);" src="{% static 'landing_page/images/overviewfixed.JPG' %}" alt="picture crash">
-                </div>
-            </div>
-            <div class="col-md-6 left-product" data-aos="fade-left" data-aos-duration="1000">
-                <div class="text-product">
-                    <h1>Overview</h1>
-                    <h3>Understand your data faster.</h3>
-                    <h4>Processing data is easier when you can see what you have. We will help you quickly understand your data, including knowing about metadata and all other information about it.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<!--- Preprocessing -->
-<section id="preprocessing">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 left-product" data-aos="fade-right" data-aos-duration="1000">
-                <div class="text-product">
-                    <h1>Pre-processing</h1>
-                    <h3>Preparing your raw data efficiently.
-                    </h3>
-                    <h4>Eddies speed up your data preparation through integrated identification and cleansing outliers in your data.
-                    </h4>
-                </div>
-            </div>
-            <div class="col-md-8 " data-aos="fade-left" data-aos-duration="1000">
-                <div class="containerproduct">
-                    <img style="width:90%; box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .2); height:auto; border: 1px solid rgb(197, 195, 195); border-radius:10px; margin-left:5%; transform: translateY(100px);" src="{% static 'landing_page/images/preprocessingfixed.JPG' %}"
-                        alt="picture crash">
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<!--- Processing -->
-<section id="processing">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" data-aos="fade-in" data-aos-duration="1000">
-                <h1 style="padding-top:40px;">Processing</h1>
-                <br>
-                <div>
-                    <img style="width:70%; box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .2); height: auto; border: 1px solid rgb(197, 195, 195); border-radius: 10px;" src="{% static 'landing_page/images/processingnew.PNG' %}" alt="picture crash">
-                </div>
-                <div class="text-product">
-                    <h3>Simplify your data processing.
-                    </h3>
-                    <h4>Processing data can be a tough work that will take a lot of time. Eddies will simplify that process, so you can focus on data analysis.
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<!--- Data Visualization -->
-<section id="datavisualization">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 left-product" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="text-product">
-                    <h1>Data Visualization</h1>
-                </div>
-                <br>
-                <br>
-                <div class="containerproductvisual">
-                    <img style="width:40%; box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .2); height:auto; border: 1px solid rgb(197, 195, 195); border-radius:10px; " src="{% static 'landing_page/images/visualfixed.JPG' %}" alt="picture crash">
-                </div>
-                <div class="text-product">
-                    <h3>Interactive and high quality data visualization.
-                    </h3>
-                    <h4>Eddies make it easy to create the graphics you want. Choose a chart type and customize any part. Also, you can understand your result deeper with interactive visualization.
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--- Feature 3 -->
-<section id="datavalidation">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 left-product" data-aos="fade-right" data-aos-duration="1000">
-                <div class="text-product">
-                    <h1 style="font-size: 3.6rem;">Data Validation</h1>
-                    <h3>Validate your data.</h3>
-                    <h4>Eddies will help you to validate your data quickly with just a click. An embedded interactive dashboard will help you figure out your result and see how well your work does.
-                    </h4>
+<div style="background-image:none;">
+    <section id="overview">
 
+        <div class="container">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}" style="color:#000;">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color:white;">Product</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div id="vid1product">
+                        <video width="110%" height="auto" autoplay muted loop>
+                            <source src="{% static 'landing_page/videos/vs_overview.mp4' %}" type="video/ogg">
+                        </video>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-8" data-aos="fade-left" data-aos-duration="1000">
-                <div class="containerproduct">
-                    <img style="width: 90%; box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .2); height: auto; border: 1px solid rgb(197, 195, 195); margin-left: 5%; border-radius:10px; transform: translateY(100px);" src="{% static 'landing_page/images/validfixed.JPG' %}" alt="picture crash">
+                <div class="col-md-6 left-product" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="text-product">
+                        <h1>Overview</h1>
+                        <p></p>
+                        <h3>Understand your data faster.</h3>
+                        <h4>Processing data is easier when you can see what you have. We will help you quickly understand your data, including knowing about metadata and all other information about it.</h4>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-</section>
+    </section>
+    <!--- Preprocessing -->
+    <section id="preprocessing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 left-product" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="text-product">
+                        <h1>Pre-processing</h1>
+                        <p></p>
+                        <h3>Preparing your raw data efficiently.
+                        </h3>
+                        <h4>Eddies speed up your data preparation through integrated identification and cleansing outliers in your data.
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="containerproduct">
+                        <div id="vid2product" data-aos="zoom-in">
+                            <video width="100%" height="auto" autoplay muted loop>
+                                    <source src="{% static 'landing_page/videos/vs_preprocessing.mp4' %}" type="video/ogg">
+                                </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Processing -->
+    <section id="processing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-in" data-aos-duration="1000">
+                    <h1 style="padding-top:40px;padding-bottom:15px;">Processing</h1>
+                    <br>
+                    <div id="vid3product" data-aos="zoom-in">
+                        <video width="100%" height="auto" autoplay muted loop>
+                                <source src="{% static 'landing_page/videos/vs_processing.mp4' %}" type="video/ogg">
+                            </video>
+                    </div>
+                    <div class="text-product">
+                        <h3>Simplify your data processing.
+                        </h3>
+                        <h4>Processing data can be a tough work that will take a lot of time. Eddies will simplify that process, so you can focus on data analysis.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Data Visualization -->
+    <section id="datavisualization">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 left-product" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="text-product">
+                        <h1>Data Visualization</h1>
+                    </div>
+                    <br>
+                    <br>
+                    <div id="vid4product" data-aos="zoom-in">
+                        <video width="100%" height="auto" autoplay muted loop>
+                                <source src="{% static 'landing_page/videos/vs_datavisualization.mp4' %}" type="video/ogg">
+                            </video>
+                    </div>
+                    <div class="text-product">
+                        <h3>Interactive and high quality data visualization.
+                        </h3>
+                        <h4>Eddies make it easy to create the graphics you want. Choose a chart type and customize any part. Also, you can understand your result deeper with interactive visualization.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Feature 3 -->
+    <section id="datavalidation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="text-product">
+                        <h1>Data Validation</h1>
+                        <br>
+                        <h3>Validate your data.</h3>
+                        <h4>Eddies will help you to validate your data quickly with just a click. An embedded interactive dashboard will help you figure out your result and see how well your work does.
+                        </h4>
+                        <br>
+                        <a href="{% url 'dashboard:dashboard' %}">
+                            <button id="startbutton">Try Our Product</button>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div id="vid5product" data-aos="zoom-in">
+                        <video width="100%" height="auto" autoplay muted loop>
+                                <source src="{% static 'landing_page/videos/vs_datavalidation.mp4' %}" type="video/ogg">
+                            </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
 {% endblock %}
