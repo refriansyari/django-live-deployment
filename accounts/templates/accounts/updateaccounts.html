@@ -1,5 +1,4 @@
-{% extends 'dashboard/basedashboard.html' %}{% load bootstrap5 %} {% load static %} {% block content %} {% if user.is_authenticated %}
-<!-- {% if request.user.id == request.user.userprofile.id %} -->
+{% extends 'dashboard/basedashboard.html' %}{% load bootstrap5 %} {% load static %} {% block content %}
 <section class="personal-information">
     <div class="container">
         <div class="container">
@@ -28,5 +27,5 @@
         </div>
     </div>
 </section>
-<!-- {% else %} You cannot edit this session. {% endif %}  -->
-{% else %} Your session has ended {% endif %} {% endblock %}
+
+{% endblock %}
