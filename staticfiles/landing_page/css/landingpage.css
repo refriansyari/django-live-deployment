@@ -133,6 +133,13 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+@media (max-width: 576px) {
+    #killerheadbanner {
+        margin-bottom: 40px;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+}
+
 .killer-text {
     text-align: left;
     padding-top: 50px;
@@ -260,6 +267,13 @@ div a {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+@media (max-width: 576px) {
+    #firsttitle {
+        margin-bottom: 20px;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+}
+
 #firsttitle h1 {
     color: #000000;
     font-weight: bold;
@@ -280,6 +294,14 @@ div a {
     margin-top: 30px;
     margin-bottom: 150px;
     font-family: 'IBM Plex Sans', sans-serif;
+}
+
+@media (max-width: 576px) {
+    #f1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
 }
 
 .textarea1 {
@@ -343,6 +365,10 @@ div #vid1 {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+#f2 h7 {
+    font-size: 2vmin;
+}
+
 div #vid2 {
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .3);
     border-radius: 5px;
@@ -355,6 +381,13 @@ div #vid2 {
 .textarea2 {
     margin-left: 50px;
     padding-top: 120px;
+}
+
+@media (max-width: 576px) {
+    .textarea2 {
+        margin-left: 50px;
+        padding-top: 20px;
+    }
 }
 
 .textarea2 h1 {
@@ -506,6 +539,16 @@ a:hover #learnbutton {
 
 .upperrow {
     margin-bottom: 60px;
+}
+
+.upperrow p {
+    font-size: 2vmin;
+    text-align: justify;
+}
+
+.bottomrow p {
+    font-size: 2vmin;
+    text-align: justify;
 }
 
 .fa-user {
@@ -798,6 +841,19 @@ th {
     box-shadow: 10px 10px 8px -6px rgba(0, 0, 0, .5);
     border-radius: 20px;
     padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .box-login {
+        position: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: none;
+        border-radius: none;
+        padding: 30px;
+    }
 }
 
 .login-icon {
