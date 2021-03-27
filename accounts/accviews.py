@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 class SignUp(SuccessMessageMixin, CreateView):
     form_class = userforms.UserSignUpForm
     template_name = 'accounts/signup.html'
-    success_message = 'Thank you for your registration. Please check your email to verify your account.'
+    success_message = 'Thank you for your registration. Please kindly check your email to get the latest news of eddies product.'
     success_url = reverse_lazy('login')
 
 @login_required(login_url='/accounts/login/')

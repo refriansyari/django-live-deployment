@@ -811,8 +811,9 @@ th {
 }
 
 .form-contact-area {
-    padding-right: 20%;
-    padding-left: 20%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 10%;
 }
 
 .box-signup {

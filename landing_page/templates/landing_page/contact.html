@@ -45,37 +45,37 @@
         <section id="float-form">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="box-password-change" data-aos="zoom-in" data-aos-duration="1000">
                             <h1 style="text-align: center;">Get in touch.</h1>
                             <br>
                             <br>
                             <img width="600" height="300" src="{% static 'landing_page/images/contacthome.svg' %}">
-                            <h4>Back to <a href="{% url 'home' %}">Home</a></h4>
+                            <h4 style="text-align: center;">Back to <a href="{% url 'home' %}">Home</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-contact-area">
+                            <form action="{% url 'landing_page:contact' %}" method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" name="message-name" class="form-control mb-30" placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="email" name="message-email" class="form-control mb-30" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea name="message" class="form-control mb-30" placeholder="Enter your message" required></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</textarea>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-
-                <div class="form-contact-area">
-                    <form action="{% url 'landing_page:contact' %}" method="post">
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" name="message-name" class="form-control mb-30" placeholder="Enter your name" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="email" name="message-email" class="form-control mb-30" placeholder="Enter your email" required>
-                            </div>
-                            <div class="col-md-12">
-                                <textarea name="message" class="form-control mb-30" placeholder="Enter your message" required></textarea>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</textarea>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    
         {% endif %}
             </div>
         </div>

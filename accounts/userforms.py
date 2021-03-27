@@ -63,18 +63,16 @@ class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('company_name', 'company_url','affiliation','country',)
+        fields = ('company_name','affiliation','country',)
         exclude =('user',)
     
         widgets = {
             'company_name' : forms.TextInput(attrs={'placeholder': 'Enter Company/Institution Name'}),
-            'company_url' : forms.URLInput ( attrs={'placeholder': 'https://www.example.com'}),
         }
     
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
         self.fields['company_name'].label = 'Company or institution name'
-        self.fields['company_url'].label = "Company or institution URL (ex: https://www.example.com)"
         self.fields['affiliation'].label = "Affiliation"
         self.fields['country'].label = "Country"
 
