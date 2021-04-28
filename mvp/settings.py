@@ -27,7 +27,7 @@ SECRET_KEY = 'mjq)%57%r9t8yj6sq5p5@wtdlat)ii^ljk_#x(_ilbbn+*&=6b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.eddiesai.com','eddies-mvp.herokuapp.com','127.0.0.1','0.0.0.0','localhost','.eddiesai.com','.herokuapp.com']
+ALLOWED_HOSTS = ['www.eddiesai.com','eddies-mvp.herokuapp.com','127.0.0.1','0.0.0.0','localhost','.eddiesai.com','.herokuapp.com',]
 
 
 # Application definition
