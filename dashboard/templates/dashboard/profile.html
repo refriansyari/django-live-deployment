@@ -18,7 +18,7 @@
                             <p><i class="fas fa-university fa-lg"></i>&nbsp;{{ user.userprofile.company_name }}</p>
                         </div>
                         <div class="edit-profile-button">
-                            <a href="{% url 'dashboard:edit_profile' request.user.id %}" class="btn btn-primary w-100" style="margin-bottom: 20px;">Edit Profile</a>
+                            <a href="{% url 'accounts:personal' request.user.id %}" class="btn btn-primary w-100" style="margin-bottom: 20px;">Edit Profile</a>
                         </div>
                         <div class="alert alert-info alert-dismissible fade show" role="alert">
                             Get our latest hints and tips for processing your data in <a href="{% url 'landing_page:tutorial' %}"><strong>Tutorials</strong></a>

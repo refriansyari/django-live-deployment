@@ -19,7 +19,7 @@ class SignUp(SuccessMessageMixin, CreateView):
 @login_required(login_url='/accounts/login/')
 def personal(request,pk):
     if UserProfile.objects.filter(user=request.user).exists():
-        return redirect('dashboard:profile', pk=pk)
+        return redirect('dashboard:edit_profile', pk=pk)
     else:
         if request.method == 'POST':
             form = userforms.UserProfileForm(request.POST, request.FILES)

@@ -233,9 +233,9 @@ a #demobutton {
     background-color: #ffffff;
     border-radius: 10px;
     border: none;
-    font-size: 1.2rem;
-    width: 140px;
-    height: 60px;
+    font-size: 2.7vmin;
+    width: 16vw;
+    height: 8vmin;
     margin: 10px;
     border: 1px solid #4460EF;
     color: #000000;
