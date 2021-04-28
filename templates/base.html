@@ -76,7 +76,7 @@
                     {% if user.is_authenticated %}
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mynavbar">
-                            <a class="nav-link" href="{% url  'dashboard:dashboard'%}">Hello <span style="color:#4460EF;">{{ user.username }} </span>!</a>
+                            <a class="nav-link" href="{% url  'dashboard:profile' request.user.id %}">Hello <span style="color:#4460EF;">{{ user.username }} </span>!</a>
                         </li>
                         <li class="nav-item mynavbar">
                             <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
