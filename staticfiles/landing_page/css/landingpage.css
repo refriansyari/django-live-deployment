@@ -225,6 +225,38 @@ a:focus #startbutton {
     font-weight: 600;
 }
 
+a #startbutton1 {
+    background-color: #4460EF;
+    /* background-color: #072E79; */
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    font-size: 2.7vmin;
+    width: 16vw;
+    height: 8vmin;
+    box-shadow: 8px 8px 8px -6px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    text-decoration: none;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+a:focus #startbutton1 {
+    background-color: #4460EF;
+    /* background-color: #072E79; */
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    width: 140px;
+    height: 60px;
+    margin: 10px;
+    box-shadow: 8px 8px 8px -6px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 a:hover #startbutton {
     transform: translateY(-10px)
 }
